@@ -12,17 +12,17 @@ variable "vpc_cidr_block" {
 }
 
 variable "public_subnet_cidr" {
-  type        = list(any)
+  type        = map(any)
   description = "An map of subnet CIDR to be created. Length of 2"                         # e.g { cidr_1 =  "100.0.1.0/24", cidr_2 = "100.0.2.0/24" }
 }
 
 variable "private_subnet_cidr" {
-  type        = list(any)
+  type        = map(any)
   description = "An map of subnet CIDR to be created. Should be length of 6"
 }
 
 
 variable "subnet_azs" {
-  type        = list(any)
+  type        = map(any)
   description = "An map of Availability Zones for the subnet CIDR. Should be length of 2" # e.g { az_1 = "us-east-1a", az_2 = "us-east-1b" } 
 }
