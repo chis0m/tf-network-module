@@ -24,6 +24,9 @@ module "network_module" {
     cidr_5 = "100.0.7.0/24",
     cidr_6 = "100.0.8.0/24"
   }
-  availability_zones  = { az_1 = "us-east-1a", az_2 = "us-east-1b" }
+  availability_zones = {
+    az_1 = "us-east-1a",
+    az_2 = "us-east-1b"
+  }
 }
 ```
