@@ -22,7 +22,7 @@ variable "private_subnet_cidr" {
 }
 
 
-variable "subnet_azs" {
+variable "availability_zones" {
   type        = map(any)
   description = "An map of Availability Zones for the subnet CIDR. Should be length of 2" # e.g { az_1 = "us-east-1a", az_2 = "us-east-1b" } 
 }
