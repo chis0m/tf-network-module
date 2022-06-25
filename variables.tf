@@ -13,7 +13,7 @@ variable "vpc_cidr_block" {
 
 variable "public_subnet_cidr" {
   type        = map(any)
-  description = "An map of subnet CIDR to be created. Length of 2"                         # e.g { cidr_1 =  "100.0.1.0/24", cidr_2 = "100.0.2.0/24" }
+  description = "An map of subnet CIDR to be created. Length of 2" # e.g { cidr_1 =  "100.0.1.0/24", cidr_2 = "100.0.2.0/24" }
 }
 
 variable "private_subnet_cidr" {
