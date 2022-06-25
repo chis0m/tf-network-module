@@ -6,7 +6,7 @@ resource "aws_subnet" "PublicSubnet-1" {
   availability_zone       = var.subnet_azs["az_1"]
 
   tags = {
-    Name = format("%s%s%s", title(var.env), title(var.base_name), "PublicSubnet-1")
+    Name = format("%s%s%s", title(var.env), title(var.base_name), "-PublicSubnet-1")
   }
 
 }
@@ -18,7 +18,7 @@ resource "aws_subnet" "PublicSubnet-2" {
   availability_zone       = var.subnet_azs["az_2"]
 
   tags = {
-    Name = format("%s%s%s", title(var.env), title(var.base_name), "PublicSubnet-2")
+    Name = format("%s%s%s", title(var.env), title(var.base_name), "-PublicSubnet-2")
   }
 
 }
@@ -28,7 +28,7 @@ resource "aws_route_table" "public-rtb" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = format("%s%s%s", title(var.env), title(var.base_name), "PublicRouteTable")
+    Name = format("%s%s%s", title(var.env), title(var.base_name), "-PublicRouteTable")
   }
 }
 
