@@ -14,7 +14,7 @@ resource "aws_nat_gateway" "nat" {
 
 
   tags = {
-    Name        = format("%s%s%s", format(var.dev), format(var.base_name), "MainNAT")
+    Name = format("%s%s%s", format(var.dev), format(var.base_name), "MainNAT")
   }
 
 }
