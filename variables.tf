@@ -11,18 +11,18 @@ variable "vpc_cidr_block" {
   description = "The CIDR block of vpc to be created"
 }
 
-variable "public_subnet_cidr_list" {
+variable "public_subnet_cidr" {
   type        = list(any)
-  description = "An array of subnet CIDR to be created. Length of 2 e.g ['100.0.1.0/24', '100.0.2.0/24']"
+  description = "An map of subnet CIDR to be created. Length of 2"                         # e.g { cidr_1 =  "100.0.1.0/24", cidr_2 = "100.0.2.0/24" }
 }
 
-variable "private_subnet_cidr_list" {
+variable "private_subnet_cidr" {
   type        = list(any)
-  description = "An array of subnet CIDR to be created. Should be length of 6"
+  description = "An map of subnet CIDR to be created. Should be length of 6"
 }
 
 
-variable "subnet_azs_list" {
+variable "subnet_azs" {
   type        = list(any)
-  description = "An array of Availability Zones for the subnet CIDR. Should be length of 2"
+  description = "An map of Availability Zones for the subnet CIDR. Should be length of 2" # e.g { az_1 = "us-east-1a", az_2 = "us-east-1b" } 
 }

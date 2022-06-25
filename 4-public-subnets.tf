@@ -1,9 +1,9 @@
 ### Create public subnets
 resource "aws_subnet" "PublicSubnet-1" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block              = var.public_subnet_cidr_list[0]
+  cidr_block              = var.public_subnet_cidr["cidr_1"]
   map_public_ip_on_launch = true
-  availability_zone       = var.subnet_azs_list[0]
+  availability_zone       = var.subnet_azs["az_1"]
 
   tags = {
     Name = format("%s%s%s", title(var.env), title(var.base_name), "PublicSubnet-1")
@@ -13,9 +13,9 @@ resource "aws_subnet" "PublicSubnet-1" {
 
 resource "aws_subnet" "PublicSubnet-2" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block              = var.public_subnet_cidr_list[1]
+  cidr_block              = var.public_subnet_cidr["cidr_2"]
   map_public_ip_on_launch = true
-  availability_zone       = var.subnet_azs_list[1]
+  availability_zone       = var.subnet_azs["az_2"]
 
   tags = {
     Name = format("%s%s%s", title(var.env), title(var.base_name), "PublicSubnet-2")
