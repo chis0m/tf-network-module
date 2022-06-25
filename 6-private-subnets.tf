@@ -1,9 +1,9 @@
 ### Create Private subnets
 resource "aws_subnet" "PrivateSubnet-1" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block              = var.private_subnet_cidr[0]
+  cidr_block              = var.private_subnet_cidr_list[0]
   map_public_ip_on_launch = false
-  availability_zone       = var.subnet_azs[0]
+  availability_zone       = var.subnet_azs_list[0]
 
   tags = {
     Name            = format("%s%s%s", title(var.env), title(var.base_name), "PrivateSubnet-1")
@@ -14,9 +14,9 @@ resource "aws_subnet" "PrivateSubnet-1" {
 
 resource "aws_subnet" "PrivateSubnet-2" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block              = var.private_subnet_cidr[1]
+  cidr_block              = var.private_subnet_cidr_list[1]
   map_public_ip_on_launch = false
-  availability_zone       = var.subnet_azs[1]
+  availability_zone       = var.subnet_azs_list[1]
 
   tags = {
     Name            = format("%s%s%s", title(var.env), title(var.base_name), "PrivateSubnet-2")
@@ -26,9 +26,9 @@ resource "aws_subnet" "PrivateSubnet-2" {
 
 resource "aws_subnet" "PrivateSubnet-3" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block              = var.private_subnet_cidr[2]
+  cidr_block              = var.private_subnet_cidr_list[2]
   map_public_ip_on_launch = false
-  availability_zone       = var.subnet_azs[0]
+  availability_zone       = var.subnet_azs_list[0]
 
   tags = {
     Name            = format("%s%s%s", title(var.env), title(var.base_name), "PrivateSubnet-3")
@@ -39,9 +39,9 @@ resource "aws_subnet" "PrivateSubnet-3" {
 
 resource "aws_subnet" "PrivateSubnet-4" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block              =var.private_subnet_cidr[3]
+  cidr_block              =var.private_subnet_cidr_list[3]
   map_public_ip_on_launch = false
-  availability_zone       = var.subnet_azs[1]
+  availability_zone       = var.subnet_azs_list[1]
 
   tags = {
     Name            = format("%s%s%s", title(var.env), title(var.base_name), "PrivateSubnet-4")
@@ -51,9 +51,9 @@ resource "aws_subnet" "PrivateSubnet-4" {
 
 resource "aws_subnet" "PrivateSubnet-5" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block              = var.private_subnet_cidr[4]
+  cidr_block              = var.private_subnet_cidr_list[4]
   map_public_ip_on_launch = false
-  availability_zone       = var.subnet_azs[0]
+  availability_zone       = var.subnet_azs_list[0]
 
   tags = {
     Name            = format("%s%s%s", title(var.env), title(var.base_name), "PrivateSubnet-5")
@@ -64,9 +64,9 @@ resource "aws_subnet" "PrivateSubnet-5" {
 
 resource "aws_subnet" "PrivateSubnet-6" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block              = var.private_subnet_cidr[4]
+  cidr_block              = var.private_subnet_cidr_list[5]
   map_public_ip_on_launch = false
-  availability_zone       =var.subnet_azs[1]
+  availability_zone       =var.subnet_azs_list[1]
 
   tags = {
     Name            = format("%s%s%s", title(var.env), title(var.base_name), "PrivateSubnet-6")
